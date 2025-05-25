@@ -84,7 +84,7 @@ const ContactForm: React.FC = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  placeholder="John Doe"
+                  placeholder="Your Name"
                 />
               </div>
               
@@ -100,7 +100,7 @@ const ContactForm: React.FC = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  placeholder="johndoe@example.com"
+                  placeholder="Your Email"
                 />
               </div>
               
@@ -115,7 +115,7 @@ const ContactForm: React.FC = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  placeholder="+880 1234 567890"
+                  placeholder="Phone Number"
                 />
               </div>
               
@@ -160,7 +160,7 @@ const ContactForm: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className={`btn-primary w-full md:w-auto ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
+              className={`inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-[#16A34A] text-white hover:bg-green-700 w-full md:w-auto ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
             >
               {loading ? (
                 <span className="flex items-center justify-center">

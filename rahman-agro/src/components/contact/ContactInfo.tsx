@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const ContactInfo: React.FC = () => {
   const infoVariants = {
@@ -34,7 +34,9 @@ const ContactInfo: React.FC = () => {
           <div>
             <h4 className="text-lg font-medium mb-1">Our Location</h4>
             <p className="text-secondary-700">
-              123 Agriculture Road, Dhaka, Bangladesh
+            5 No. Daulatpur,Jagadishpur ,Bishwanath, Sylhet  
+            </p>
+            <p className='pt-1' > ৫ নং দৌলতপুর ,জগদীশপুর, বিশ্বনাথ, সিলেট
             </p>
           </div>
         </motion.div>
@@ -53,10 +55,10 @@ const ContactInfo: React.FC = () => {
           <div>
             <h4 className="text-lg font-medium mb-1">Phone Number</h4>
             <p className="text-secondary-700">
-              +880 1234 567890
+              +880 1791344987
             </p>
             <p className="text-secondary-700">
-              +880 9876 543210
+            +880 1306465739
             </p>
           </div>
         </motion.div>
@@ -75,15 +77,13 @@ const ContactInfo: React.FC = () => {
           <div>
             <h4 className="text-lg font-medium mb-1">Email Address</h4>
             <p className="text-secondary-700">
-              info@nragro.com.bd
+            rahmanagrofarm@gmail.com
             </p>
-            <p className="text-secondary-700">
-              support@nragro.com.bd
-            </p>
+           
           </div>
         </motion.div>
         
-        <motion.div 
+        {/* <motion.div 
           className="flex items-start"
           custom={3}
           initial="hidden"
@@ -103,7 +103,7 @@ const ContactInfo: React.FC = () => {
               Saturday: 9:00 AM - 2:00 PM
             </p>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
       
       <div>

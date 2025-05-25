@@ -5,7 +5,7 @@ const ContactHero: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-b from-black/90 to-black/90 text-white pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('./images/bg.png')] bg-cover bg-center opacity-15"></div>
+        <div className="absolute inset-0 bg-[url('/images/bg.png')] bg-cover bg-center opacity-15"></div>
       </div>
       
       <div className="container-custom relative z-10">
