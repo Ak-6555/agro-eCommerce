@@ -21,7 +21,7 @@ const Mission: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission & Vision</h2>
           <p className="text-lg text-secondary-700">
-            At NR Agro, we're dedicated to transforming the agricultural landscape through sustainable practices,
+            At Rahman Agro, we're dedicated to transforming the agricultural landscape through sustainable practices,
             innovation, and community empowerment.
           </p>
         </div>

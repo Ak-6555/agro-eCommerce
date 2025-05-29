@@ -11,24 +11,23 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    content: "Rahman Agro's premium rice seeds have significantly increased my yield. Their technical support team is always available to help with any questions.",
-    author: "Ashraful Islam",
-    role: "Rice Farmer, Dhaka"
+    content: "Rahman Agro's high-quality cattle feed has greatly improved the health and weight gain of my cows. Their expert advice has been invaluable for managing my dairy farm.",
+    author: "Abdul Karim",
+    role: "Dairy Farmer, Bogura"
   },
   {
     id: 2,
-    content: "The organic fertilizers from Rahman Agro have improved my soil quality tremendously. I've been using their products for 5 years and couldn't be happier with the results.",
-    author: "Fatima Begum",
-    role: "Vegetable Farmer, Chittagong"
+    content: "Thanks to Rahman Agro’s goat nutrition supplements, my herd is healthier and producing more milk than ever before. I trust them for all my livestock needs.",
+    author: "Nasima Khatun",
+    role: "Goat Farmer, Jessore"
   },
   {
     id: 3,
-    content: "As a commercial farmer, I rely on consistent quality. Rahman Agro has never disappointed me with their reliable products and timely delivery.",
-    author: "Mohammad Rahman",
-    role: "Commercial Farmer, Sylhet"
+    content: "As someone running a large cattle farm, consistency in feed quality and supply is essential. Rahman Agro has been a reliable partner I can count on.",
+    author: "Sayed Hossain",
+    role: "Cattle Farm Owner, Rangpur"
   }
 ];
-
 const TestimonialsSection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoplay, setIsAutoplay] = useState(true);

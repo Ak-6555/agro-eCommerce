@@ -1,21 +1,22 @@
 import React, { useEffect } from 'react';
 import AboutHero from '../components/about/AboutHero';
 import Mission from '../components/about/Mission';
-import Team from '../components/about/Team';
+import AboutSection from '../components/AboutSection';
 
 
 const AboutPage: React.FC = () => {
   useEffect(() => {
-    document.title = 'About Us - NR Agro';
+    document.title = 'About Us - Rahman Agro';
   }, []);
 
   return (
     <div>
       <AboutHero/>
+      <AboutSection />
       <Mission />
-      <Team />
+      {/* <Team /> */}
       
-      <section className="py-12 bg-primary-600 text-white text-center">
+      <section className="py-12 bg-green-700 text-white text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Join Our Mission</h2>
           <p className="text-lg text-primary-100 mb-8">

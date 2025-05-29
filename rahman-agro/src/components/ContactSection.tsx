@@ -1,16 +1,23 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
+  const infoVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.1 * i,
+        duration: 0.5,
+      }
+    })
+  };
   return (
     <section className="py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">Contact Us</h2>
-          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500">
-            Have questions or need assistance? We're here to help!
-          </p>
-        </div>
+
 
         <div className="bg-white shadow-xl rounded-lg overflow-hidden">
           <div className="grid md:grid-cols-2">
@@ -41,7 +48,7 @@ const ContactSection: React.FC = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700">
                     Subject
@@ -53,7 +60,7 @@ const ContactSection: React.FC = () => {
                     className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                     Message
@@ -65,7 +72,7 @@ const ContactSection: React.FC = () => {
                     className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500"
                   ></textarea>
                 </div>
-                
+
                 <div>
                   <button
                     type="submit"
@@ -76,59 +83,91 @@ const ContactSection: React.FC = () => {
                 </div>
               </form>
             </div>
-            
+
             <div className="relative">
               <div className="h-full bg-green-700 text-white p-8 lg:p-12">
-                <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <MapPin className="h-6 w-6 text-green-300 mr-3 mt-1" />
-                    <div>
-                      <p className="font-medium">Address</p>
-                      <p className="mt-1">123 Agriculture Road, Dhaka 1230, Bangladesh</p>
+                <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+
+                <div className="space-y-6 mb-8">
+                  <motion.div
+                    className="flex items-start"
+                    custom={0}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={infoVariants}
+                  >
+                    <div className="bg-white p-3 rounded-full mr-4">
+                      <MapPin size={24} className="text-green-700" />
                     </div>
-                  </div>
-                  <div className="flex items-start">
-                    <Phone className="h-6 w-6 text-green-300 mr-3 mt-1" />
                     <div>
-                      <p className="font-medium">Phone</p>
-                      <p className="mt-1">+880 1712 345678</p>
+                      <h4 className="text-lg font-medium mb-1">Our Location</h4>
+                      <p className="text-white">
+                        5 No. Daulatpur,Jagadishpur ,Bishwanath, Sylhet
+                      </p>
+                      <p className='pt-1' > ৫ নং দৌলতপুর ,জগদীশপুর, বিশ্বনাথ, সিলেট
+                      </p>
                     </div>
-                  </div>
-                  <div className="flex items-start">
-                    <Mail className="h-6 w-6 text-green-300 mr-3 mt-1" />
+                  </motion.div>
+
+                  <motion.div
+                    className="flex items-start"
+                    custom={1}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={infoVariants}
+                  >
+                    <div className="bg-white p-3 rounded-full mr-4">
+                      <Phone size={24} className="text-green-700" />
+                    </div>
                     <div>
-                      <p className="font-medium">Email</p>
-                      <p className="mt-1">info@nragro.com.bd</p>
+                      <h4 className="text-lg font-medium mb-1">Phone Number</h4>
+                      <p className="text-white">
+                        +880 1791344987
+                      </p>
+                      <p className="text-white">
+                        +880 1306465739
+                      </p>
                     </div>
-                  </div>
-                  <div className="flex items-start">
-                    <Clock className="h-6 w-6 text-green-300 mr-3 mt-1" />
+                  </motion.div>
+
+                  <motion.div
+                    className="flex items-start"
+                    custom={2}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={infoVariants}
+                  >
+                    <div className="bg-white p-3 rounded-full mr-4">
+                      <Mail size={24} className="text-green-700" />
+                    </div>
                     <div>
-                      <p className="font-medium">Business Hours</p>
-                      <p className="mt-1">Mon - Fri: 9:00 AM - 6:00 PM</p>
-                      <p>Saturday: 9:00 AM - 2:00 PM</p>
+                      <h4 className="text-lg font-medium mb-1">Email Address</h4>
+                      <p className="text-white">
+                        rahmanagrofarm@gmail.com
+                      </p>
+
                     </div>
-                  </div>
+                  </motion.div>
+
                 </div>
-                
-                <div className="mt-10">
-                  <h4 className="text-lg font-medium mb-4">Follow Us</h4>
+
+                <div>
+                  <h4 className="text-lg font-medium mb-3">Follow Us</h4>
                   <div className="flex space-x-4">
-                    <a href="#" className="bg-green-800 p-2 rounded-full hover:bg-green-900 transition-colors">
-                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12z" />
-                      </svg>
+                    <a href="#" className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 hover:bg-primary-600 hover:text-white transition-colors duration-200">
+                      <Facebook size={20} />
                     </a>
-                    <a href="#" className="bg-green-800 p-2 rounded-full hover:bg-green-900 transition-colors">
-                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.5 14.37c-.17.42-.55.7-1 .7-.58 0-1.05-.47-1.05-1.05 0-.57.47-1.04 1.05-1.04.58 0 1.04.47 1.04 1.04 0 .18-.04.35-.11.49l1.14.56c.18-.35.29-.75.29-1.18 0-1.38-1.12-2.5-2.5-2.5s-2.5 1.12-2.5 2.5 1.12 2.5 2.5 2.5c.76 0 1.44-.34 1.9-.88l-.76-.38zm-9.05-1.67c0-.57.47-1.04 1.05-1.04.58 0 1.04.47 1.04 1.04 0 .18-.04.35-.11.49l1.14.56c.18-.35.29-.75.29-1.18 0-1.38-1.12-2.5-2.5-2.5s-2.5 1.12-2.5 2.5 1.12 2.5 2.5 2.5c.76 0 1.44-.34 1.9-.88l-.74-.37c-.17.42-.56.7-1.01.7-.58 0-1.05-.47-1.05-1.04zm4.55.16h2v-6h-2v6z" />
-                      </svg>
+                    <a href="#" className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 hover:bg-primary-600 hover:text-white transition-colors duration-200">
+                      <Twitter size={20} />
                     </a>
-                    <a href="#" className="bg-green-800 p-2 rounded-full hover:bg-green-900 transition-colors">
-                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                      </svg>
+                    <a href="#" className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 hover:bg-primary-600 hover:text-white transition-colors duration-200">
+                      <Instagram size={20} />
+                    </a>
+                    <a href="#" className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 hover:bg-primary-600 hover:text-white transition-colors duration-200">
+                      <Linkedin size={20} />
                     </a>
                   </div>
                 </div>

@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
           <div className="mt-10 sm:flex">
             <div className="rounded-md shadow">
               <a
-                href="#"
+                href="/products"
                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10"
               >
                 Explore Products
@@ -32,10 +32,10 @@ const Hero: React.FC = () => {
             </div>
             <div className="mt-3 sm:mt-0 sm:ml-3">
               <a
-                href="#"
+                href="/about"
                 className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-green-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
               >
-                Learn More
+                About Rahman Agro
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </div>

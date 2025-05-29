@@ -82,28 +82,7 @@ const ContactInfo: React.FC = () => {
            
           </div>
         </motion.div>
-        
-        {/* <motion.div 
-          className="flex items-start"
-          custom={3}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={infoVariants}
-        >
-          <div className="bg-primary-100 p-3 rounded-full mr-4">
-            <Clock size={24} className="text-primary-600" />
-          </div>
-          <div>
-            <h4 className="text-lg font-medium mb-1">Working Hours</h4>
-            <p className="text-secondary-700">
-              Monday - Friday: 9:00 AM - 6:00 PM
-            </p>
-            <p className="text-secondary-700">
-              Saturday: 9:00 AM - 2:00 PM
-            </p>
-          </div>
-        </motion.div> */}
+      
       </div>
       
       <div>

@@ -21,7 +21,7 @@ const Map: React.FC = () => {
         {/* Overlay with map pin */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="bg-primary-600 text-white px-4 py-2 rounded-lg shadow-lg">
-            <span className="font-medium">NR Agro Headquarters</span>
+            <span className="font-medium">Rahman Agro Headquarters</span>
           </div>
         </div>
         

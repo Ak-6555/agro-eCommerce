@@ -43,31 +43,19 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 flex items-center">
+                <a href="/about" className="text-gray-400 hover:text-green-400 flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 flex items-center">
+                <a href="/products" className="text-gray-400 hover:text-green-400 flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
                   Products
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 flex items-center">
-                  <ChevronRight className="h-4 w-4 mr-2" />
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 flex items-center">
-                  <ChevronRight className="h-4 w-4 mr-2" />
-                  News & Events
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 flex items-center">
+                <a href="/contact" className="text-gray-400 hover:text-green-400 flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
                   Contact Us
                 </a>
@@ -81,37 +69,19 @@ const Footer: React.FC = () => {
               <li>
                 <a href="#" className="text-gray-400 hover:text-green-400 flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
-                  Seeds
+                  Cows
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-green-400 flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
-                  Fertilizers
+                  Goats
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-green-400 flex items-center">
                   <ChevronRight className="h-4 w-4 mr-2" />
-                  Pesticides
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 flex items-center">
-                  <ChevronRight className="h-4 w-4 mr-2" />
-                  Agricultural Tools
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 flex items-center">
-                  <ChevronRight className="h-4 w-4 mr-2" />
-                  Plant Nutrition
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-green-400 flex items-center">
-                  <ChevronRight className="h-4 w-4 mr-2" />
-                  Irrigation Systems
+                  Fishes
                 </a>
               </li>
             </ul>
@@ -122,36 +92,24 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex">
                 <MapPin className="h-5 w-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                <span className="text-gray-400">123 Agriculture Road, Dhaka 1230, Bangladesh</span>
+                <div>
+                  <p className="text-gray-400">5 No. Daulatpur,Jagadishpur ,Bishwanath, Sylhet</p>
+                  <p className="text-gray-400 pt-1">৫ নং দৌলতপুর ,জগদীশপুর, বিশ্বনাথ, সিলেট</p>
+                </div>
               </li>
               <li className="flex">
                 <PhoneCall className="h-5 w-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                <span className="text-gray-400">+880 1712 345678</span>
+                <div>
+                  <p className="text-gray-400">+880 1791344987</p>
+                  <p className="text-gray-400 pt-1">+880 1306465739</p>
+                </div>
               </li>
               <li className="flex">
                 <Mail className="h-5 w-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                <span className="text-gray-400">info@nragro.com.bd</span>
+                <span className="text-gray-400">rahmanagrofarm@gmail.com</span>
               </li>
             </ul>
-            <div className="mt-6">
-              <h4 className="text-base font-medium mb-3">Subscribe to Newsletter</h4>
-              <form className="flex">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="px-4 py-2 bg-gray-800 text-white rounded-l-md focus:outline-none focus:ring-1 focus:ring-green-500 w-full"
-                />
-                <button
-                  type="submit"
-                  className="bg-green-600 hover:bg-green-700 rounded-r-md px-4 transition-colors"
-                >
-                  <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </button>
-              </form>
-            </div>
-          </div>
+                     </div>
         </div>
       </div>
       <div className="border-t border-gray-800">

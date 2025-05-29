@@ -15,7 +15,7 @@ const AboutHero: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">About <span className='text-[#16A34A]'>Rahman Agro</span></h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">About <span className='text-[#16A34A]'>Us</span></h1>
           <p className="text-lg text-primary-100 mb-8">
             Pioneering sustainable agricultural solutions in Bangladesh since 2010. 
             Our mission is to revolutionize farming practices while respecting our environment.

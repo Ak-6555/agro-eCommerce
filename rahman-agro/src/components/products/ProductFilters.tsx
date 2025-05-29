@@ -16,11 +16,10 @@ const ProductFilters: React.FC<ProductFiltersProps> = ({
 }) => {
   const categories = [
     'All Products',
-    'Seeds',
-    'Fertilizers',
-    'Pesticides',
-    'Tools',
-    'Equipment'
+    'Cows',
+    'Goats',
+    'Fishes',
+
   ];
 
   const sortOptions = [

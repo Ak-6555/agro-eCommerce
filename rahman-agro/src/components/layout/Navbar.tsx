@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, PhoneCall } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <nav className="bg-white shadow-md fixed w-full z-50">
@@ -14,17 +16,16 @@ const Navbar: React.FC = () => {
             <div className="w-20 h-20">  
               <img src="/images/logoRahmanAgro.PNG" className='w-full h-full object-contain' alt="this is the logo" />
               </div>
-              <span className="ml-2 text-[30px] font-extrabold tracking-tight text-[#3a9e38]">Rahman Agro</span>
+              <span className="ml-2 text-[30px] font-extrabold tracking-tight text-green-600">Rahman Agro</span>
             </div>
             <div className="hidden md:ml-[100px] md:flex md:space-x-8">
-              <a href="/" className="border-[#49b848] uppercase text-[#222D23] inline-flex items-center px-1 pt-1 border-b-2 text-base font-semibold">
+              <a href="/" 
+              className={`border-[#49b848] uppercase text-[#222D23] inline-flex items-center px-1 pt-1 border-b-1 text-base font-semibold ${location.pathname === "/" ? 'border-[#49b848] border-b-2' : ''}`}>
                 Home
               </a>
               <div className="relative">
                 <a href="/products" 
-                  className="text-[#222D23] uppercase hover:text-[#222D23] inline-flex items-center px-1 pt-1 text-base font-semibold"
-                  // onClick={() => setDropdownOpen(!dropdownOpen)}
-                >
+                  className={`text-[#222D23] uppercase hover:text-[#222D23] inline-flex items-center px-1 pt-1 border-b-1 text-base font-semibold ${location.pathname === "/products"? 'border-[#49b848] border-b-2' : ''}`}>
                   Products
                   {/* <ChevronDown className="ml-1 h-4 w-4" /> */}
                 </a>
@@ -40,18 +41,30 @@ const Navbar: React.FC = () => {
                 )} */}
               </div>
             
-              <a href="/about" className="border-transparent uppercase text-[#222D23] hover:border-green-300 hover:text-[#222D23] inline-flex items-center px-1 pt-1 border-b-2 text-base font-semibold">
+              <a href="/about" 
+              className={`border-transparent uppercase text-[#222D23] hover:border-green-300 hover:text-[#222D23] inline-flex items-center px-1 pt-1 border-b-2 text-base font-semibold ${location.pathname === "/about" ? 'border-[#49b848] border-b-2' : ''}`}>
                 About Us
               </a>
-              <a href="/contact" className="border-transparent uppercase text-[#222D23] hover:border-green-300 hover:text-[#222D23] inline-flex items-center px-1 pt-1 border-b-2 text-base font-medium">
+              <a href="/contact" 
+              className={`border-transparent uppercase text-[#222D23] hover:border-green-300 hover:text-[#222D23] inline-flex items-center px-1 pt-1 border-b-2 text-base font-medium ${location.pathname === "/contact" ? 'border-[#49b848] border-b-2' : ''}`}>
                 Contact
               </a>
             </div>
           </div>
-          <div className="hidden md:flex items-center">
-            <button className="inline-flex items-center justify-center px-4 py-2 border border-transparent rounded shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-             Contact Us
-            </button>
+          {/* <div className="hidden md:flex items-center gap-2">
+            <Link to="/signup"  className="inline-flex items-center justify-center px-6 py-2 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+             Sign up
+            </Link>
+            <Link to="/login" className="inline-flex items-center justify-center px-6 py-2  border-transparent rounded-full shadow-sm text-base hover:text-white font-medium text-green-600 border border-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+             Login
+            </Link>
+          </div> */}
+          <div className="flex my-auto">
+                <PhoneCall className="h-12 w-12 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-[#222D23] font-semibold">+880 1791344987</p>
+                  <p className="text-[#222D23] pt-1 font-semibold">+880 1306465739</p>
+                </div>
           </div>
           <div className="-mr-2 flex items-center md:hidden">
             <button 
