@@ -50,8 +50,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         </div>
 
         <div className="flex items-center justify-between">
-          <span className="text-xl font-bold text-black">
-            {"0000.00"} BDT
+          <span className="text-xl font-semibold text-black">
+            {"000.00"} BDT
           </span>
           <button className="inline-flex items-center justify-center px-4 py-2 rounded font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-[#16A34A] text-white hover:bg-primary-600 focus:ring-primary-600">
             <ShoppingCart size={18} className="mr-2" />
